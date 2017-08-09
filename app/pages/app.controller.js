@@ -13,7 +13,7 @@
         vm.throwSimpleError = _throwSimpleError;
 
         activate();
-
+ 
         ////////////////
 
         function activate() { }
