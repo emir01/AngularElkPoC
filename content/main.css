@@ -1,0 +1,7 @@
+body {
+  padding-top: 5rem;
+}
+
+.btn:hover{
+    cursor: pointer;
+}

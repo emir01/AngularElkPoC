@@ -2,24 +2,65 @@
 <html lang="en">
 
 <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="" href="">
+  <title>Elk Loggin PoC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="" href="/node_modules/tether/dist/css/tether.min.css">
+
+  <link rel="stylesheet" type="" href="/content/main.css">
 </head>
 
-<body data-ng-app="logpoc">
+<!-- ######################################## BODY ########################################  -->
+
+<body ng-app="logpoc">
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <a class="navbar-brand" href="#">Loggin PoC</a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
     <div ui-view></div>
+
+  </div>
+  <!-- /.container -->
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
 </body>
 
-<script type="text/javascript" src="/node_modules/angular/angular.min.js">
+<!-- ######################################## BODY ########################################  -->
 
-</script>
+
+<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/node_modules/tether/dist/js/tether.min.js"></script>
+<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/node_modules/angular/angular.min.js"></script>
 <script type="text/javascript" src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 <script type="text/javascript" src="/app/app.module.js"></script>
-<script type="text/javascript" src="/app/pages/app.controller.js"></script>
+
 <script type="text/javascript" src="/app/config/app.states.js"></script>
 <script type="text/javascript" src="/app/config/app.exceptions.js"></script>
+<script type="text/javascript" src="/app/config/app.constants.js"></script>
 
+<script type="text/javascript" src="/app/pages/app.controller.js"></script>
+
+<script type="text/javascript" src="/app/services/elk.service.js"></script>
+<script type="text/javascript" src="/app/services/user.service.js"></script>
 </html>

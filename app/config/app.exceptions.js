@@ -12,7 +12,7 @@
 
     extendExceptionHandler.$inject = ["$delegate", "$injector", "$state"];
 
-    function extendExceptionHandler($delegate, $injector, $state) {
+    function extendExceptionHandler($delegate, $injector) {
         return function (exception, cause, stackTrace) {
             $delegate(exception, cause);
 
@@ -22,7 +22,9 @@
                 cause: cause,
             };
 
-            console.log(JSON.stringify(errorData));
+            var elkService = $injector.get("elkLoggerService");
+
+            elkService.logToElkWithEnrichment(errorData);
 
             /**
              * Here we could add the error to a service's collection,
