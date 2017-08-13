@@ -14,6 +14,7 @@
 
     function extendExceptionHandler($delegate, $injector) {
         return function (exception, cause, stackTrace) {
+            
             $delegate(exception, cause);
 
             var errorData = {

@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.5",
+    "angular-highlightjs": "^0.7.1",
     "angular-ui-router": "^1.0.3",
     "bootstrap": "4.0.0-alpha.6",
     "jquery": "^3.2.1"
